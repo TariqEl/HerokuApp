@@ -10,13 +10,22 @@
     "dev:server": "cd server && npm run dev",
     "postinstall": "npm run install:client && npm run install:server",
     "install:client": "cd client && npm install --include=dev",
-    "install:server": "cd server && npm install",
-    "start": "cd server && npm start",
-    "build": "cd client && npm run build"
+    "install:server": "cd server && npm install --include=dev",
+    "build": "npm run build:client",
+    "build:client": "cd client && npm run build",
+    "start": "cd server && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TariqEl/HerokuApp.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TariqEl/HerokuApp/issues"
+  },
+  "homepage": "https://github.com/TariqEl/HerokuApp#readme",
   "dependencies": {
     "concurrently": "^8.2.1"
   }
